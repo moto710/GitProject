@@ -11,7 +11,7 @@
     <form action="/formSoThich.html" method="post" style="background-color: teal; font-size: 20px; font-family:'Times New Roman', Times, serif;">
         <table style="background-color: white;" align="center">
             <thead>
-                <th colspan="4" style="background-color: red; color: white;">SỞ THÍCH CỦA BẠN</th>
+                <th colspan="4" style="background-color: orange; color: white;">SỞ THÍCH CỦA BẠN</th>
             </thead>
             <tbody>
                 <tr>
@@ -46,11 +46,11 @@
         </table>
     </form>
     <h1>Second part</h1>
-    <table border="1">
+    <table style="background-color: rgb(238, 238, 74); color: blue;">
         <form action="formSoThich.html" method="post">
             <thead>
                 <tr>
-                    <th colspan="2" align="left">ĐĂNG KÝ HỌC VIÊN</th>
+                    <th colspan="2" align="left" style="background-color: aquamarine;">ĐĂNG KÝ HỌC VIÊN</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,12 +70,29 @@
                     <td>Địa chỉ</td>
                     <td><textarea name="address"" cols="30" rows="10"></textarea></td>
                 </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
+                <tr>
+                    <td>Lớp</td>
+                    <td>
+                        <!-- <Select name="class">
+                            <option selected disabled>Chọn lớp</option>
+                            <option value="C07">C07</option>
+                            <option value="C08">C08</option>
+                            <option value="C09">C09</option>
+                        </Select> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email2"></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="tel" name="phoneNumber"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại"></td>
             </tbody>
-
         </form>
     </table>
 </body>
