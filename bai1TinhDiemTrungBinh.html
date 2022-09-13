@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+    <script>
+        let diemly = prompt('Nhập điểm môn Vật Lý: '),
+            diemhoa = prompt('Nhập điểm môn Hóa Học: '),
+            diemsinh = prompt('Nhập điểm môn Sinh Học: '),
+            ly = parseInt(diemly),
+            hoa = parseInt(diemhoa),
+            sinh = parseInt(diemsinh), 
+            trungbinh = (ly + hoa + sinh)/3,
+            tong = ly + hoa + sinh;
+        document.write('Điểm trung bình là: ' + trungbinh);
+        document.write('<br>');
+        document.write('Tổng điểm là: ' + tong);
+    </script>
+</body>
+</html>
