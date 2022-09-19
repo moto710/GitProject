@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>From currency</th>
+                <th>To currency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td><input type="number" id="amount"></td>
+            <td>
+                <select id="fromcurrency">
+                    <option value="VietNamDong">Việt Nam Đồng</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="tocurrency">
+                    <option value="USD">USD</option>
+                    <option value="VietNamDong">Việt Nam Đồng</option>
+                </select>
+            </td>
+            <td><button onclick="convertmoney()">Convert</button>
+            </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td id="Result">Result: </td>
+        </tfoot>        
+    </table>
+    <!-- <p id="result"></p> -->
+    <script>
+        function convertmoney(){
+            let sotien = document.getElementById("amount").value;
+                fromcur = document.getElementById("fromcurrency").value;
+                tocur = document.getElementById("tocurrency").value;
+                Result;
+            if (fromcur == "VietNamDong" && tocur == "VietNamDong"){
+                Result = "Result: " + sotien + "Đồng";
+            } else if (fromcur == "VietNamDong" && tocur == "USD"){
+                Result = "Result: " + (sotien/23000) + "USD";
+            } else if(fromcur == "USD" && tocur == "USD"){
+                Result = "Result: " + (sotien) + "USD";
+            } else {Result = "Result: " + (sotien*23000) + "VNĐ"}
+            document.getElementById("Result").innerHTML = Result;
+        }       
+    </script>
+</body>
+</html>
