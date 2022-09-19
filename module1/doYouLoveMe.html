@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me!</title>
+</head>
+<body>
+    <h2 style="text-align: center; color:blue">DO YOU LOVE ME???</h2>
+    <button onclick="loveYou()">YES</button>
+    <button id="no" onmouseover="stillLoveYou">NO</button>
+    <input type="text" value="nnoooo" onmouseover="stillLoveYou()" id="nooo" style="position: absolute; left: 451px; top: 98px">
+    <script>
+        function loveYou() {
+            alert("<3!!! Love you too!!!")
+        }
+        function stillLoveYou() {
+            let x = Math.round(Math.random() * window.innerWidth);
+            let y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('noo').style.left = x + 'px';
+            document.getElementById('noo').style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>

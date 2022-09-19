@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game</title>
+</head>
+<body>    
+    <div class="puzzles">
+        <img id="img1" src="/module1/media/cat1.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+		<img id="img2" src="/module1/media/cat2.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img3" src="/module1/media/cat3.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img4" src="/module1/media/cat4.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img5" src="/module1/media/cat5.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img1" src="/module1/media/panda1.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+		<img id="img2" src="/module1/media/panda2.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img3" src="/module1/media/panda3.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img4" src="/module1/media/panda4.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+        <img id="img5" src="/module1/media/panda5.jpg" alt="" style="box-shadow: red 4px 4px 9px;">
+      </div>
+    <script>
+        let Images = {
+	imgsDB: 
+	[
+	["cat1.jpg", 
+	"cat2.jpg", 
+	"cat3.jpg", 
+	"cat4.jpg", 
+	"cat5.jpg"],	
+	["panda1.jpg",
+	"panda2.jpg",
+	"panda3.jpg",
+	"panda4.jpg",
+	"panda5.jpg"]
+	],
+	imgpos: [0, 0, 0, 0, 0]
+	
+}
+
+function placeImage(imgpos1, imgToggle) {
+	Images.imgpos[imgpos1 - 1] = imgToggle;        
+	let imageName = "#img" + imgpos1.toString();  
+	$(imageName).attr("src", "./media" + Images.imgsDB[imgToggle][imgpos1 - 1]);
+
+}
+
+function setImagesRandom() {
+	for (let i=1; i <= 5; i++)
+	{
+		let num1 = Math.floor ((Math.random() * 3));
+		placeImage(i, num1);
+	}
+}
+
+function imageClick(imgpos1) {
+	let imgToggle = Images.imgpos[imgpos1 - 1];
+	if (imgToggle === 0) {
+		placeImage(imgpos1, 1);
+	}
+	else if (imgToggle === 1) {
+		placeImage(imgpos1, 2);
+	}
+	else if (imgToggle === 2) {
+		placeImage(imgpos1, 0);
+	}
+	
+}
+
+function checkSet() {
+	let setImg = Images.imgpos[0];
+	let setFlag = true;
+	for (let i=1; i < 5; i++)
+	{
+		if (Images.imgpos[i] !== Images.imgpos[i - 1]) {
+			setFlag = false;
+		}
+	}
+
+	if (setFlag) {
+		$('img').css("box-shadow", "4px 4px 9px red")
+	}
+	else {
+		$('img').css("box-shadow", "2px 3px 3px black")
+	}
+}
+
+let main = function () 
+{
+
+	setImagesRandom();
+
+	$("#img1").click(function(){
+		imageClick(1);
+		checkSet();
+	})
+	$("#img2").click(function(){
+		imageClick(2);
+		checkSet();
+	})
+	$("#img3").click(function(){
+		imageClick(3);
+		checkSet();
+	})
+	$("#img4").click(function(){
+		imageClick(4);
+		checkSet();
+	})
+	$("#img5").click(function(){
+		imageClick(5);
+		checkSet();
+	})
+
+}
+
+
+$(document).ready(main());
+    </script>
+</body>
+</html>
