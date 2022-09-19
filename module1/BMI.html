@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+    <script>
+        let kg=Number(prompt("Enter your weight:"));
+            meter=Number(prompt("Enter your height:"));
+            bmi=kg/(meter**2);
+        if(bmi<18.5) {
+            document.write("Your BMI is: " + bmi + " You are underweight");
+        } else if (bmi<25) {
+            document.write("Your BMI is: " + bmi + " You are normal");
+        } else if (bmi<30) {
+            document.write("Your BMI is: " + bmi + " You are overweight");
+        } else document.write("Your BMI is: " + bmi + " You are obese");
+    </script>
+</body>
+</html>
