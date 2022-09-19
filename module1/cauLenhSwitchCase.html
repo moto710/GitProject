@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong tháng!</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập tháng</td>
+            <td><input type="number" id="month"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" onclick="getDays()">Tính số Ngày</button></td>
+        </tr>
+        <tr>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <script>
+        
+        function getDays() {
+            let month=Number(document.getElementById("month").value);
+            let days;
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    days=31;
+                    document.getElementById("result").innerHTML="Tháng " + month + " có số ngày là: " + days;
+                    break;
+                case 2:
+                    days="28/29";
+                    document.getElementById("result").innerHTML="Tháng " + month + " có số ngày là: " + days;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    days=30;
+                    document.getElementById("result").innerHTML="Tháng " + month + " có số ngày là: " + days;
+                    break;
+                default:
+                document.getElementById("result").innerHTML="Không hợp lệ";
+            }
+        }
+    </script>
+</body>
+</html>
