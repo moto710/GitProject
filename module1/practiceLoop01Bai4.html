@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci % 5 = 0</title>
+</head>
+<body>
+    <script>
+        for (n=0;n>=0;n++) {
+            let a=Math.pow((1+Math.sqrt(5))/2, n),
+                b=Math.pow((1-Math.sqrt(5))/2, n),
+                c=1/Math.sqrt(5),
+                fibo=c*(a-b);
+                if (parseInt(fibo)%5==0 && fibo>0) {
+                    document.write(parseInt(fibo));
+                    break;
+                }  
+        }
+    </script>
+</body>
+</html>

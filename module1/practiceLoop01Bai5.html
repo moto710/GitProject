@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng 20 số Fibonacci</title>
+</head>
+<body>
+    <script>
+        let sum=0;
+        for (n=0;n<20;n++) {
+            let a=Math.pow((1+Math.sqrt(5))/2, n),
+                b=Math.pow((1-Math.sqrt(5))/2, n),
+                c=1/Math.sqrt(5),
+                fibo=c*(a-b)
+                sum=sum+fibo;
+        }
+        document.write(parseInt(sum));
+    </script>
+</body>
+</html>
