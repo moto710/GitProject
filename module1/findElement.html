@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+    <script>
+        const numberArray= new Array(1,2,3,4,5,6,7,8,9,10);
+        let input=Number(prompt("Nhập số của bạn:"));
+        for(i=0;i<numberArray.length;i++){
+            if (Number(numberArray[i])==input){
+                document.write(`Số ${input} nằm trong mảng!`);
+                break;
+            } 
+            else {
+                document.write(`Số ${input} không nằm trong mảng!`);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
