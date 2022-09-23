@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo ngược element trong array</title>
+</head>
+<body>
+    <script>
+        const primitiveArray= new Array ("Huda","Tiger","Heineken","Saigon","Larue","Budweiser");
+        const convertedArray=new Array ();
+        document.write(`The primitive array is: ${primitiveArray}.` +"<br>"+"<br>"); 
+        for(i=primitiveArray.length-1;i>=0;i--){
+            convertedArray[primitiveArray.length-i-1]=primitiveArray[i];
+        }document.write(`The converted array is: ${convertedArray}`+"<br>");
+    </script>
+</body>
+</html>
