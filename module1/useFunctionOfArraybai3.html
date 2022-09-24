@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển chữ thường sang chữ hoa và ngược lại</title>
+</head>
+<body>
+    <script>
+        let yourString=prompt("Nhập câu của bạn:");
+        let upper= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let lower = "abcdefghijklmnopqrstuvwxyz";
+        let result= [];
+        for (i=0;i<yourString.length;i++){
+            if (upper.indexOf(yourString[i]) !== -1){
+                result.push(yourString[i].toLowerCase());
+            }
+            else if (lower.indexOf(yourString[i] !== -1)){
+                result.push(yourString[i].toUpperCase());
+            }
+            else {
+                result.pus(yourString[i]);
+            }
+        }
+        document.write(result.join(''));
+    </script>
+</body>
+</html>
