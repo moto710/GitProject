@@ -8,14 +8,25 @@
 </head>
 <body>
     <script>
-        const numberArray = new Array (1,7,3,4,5,25,73,24,07,86,3,6);
-        let max=numberArray[0];
-        for (i=0;i<numberArray.length;i++){
-            if (numberArray[i]-numberArray[i+1]>=0){
-                max=numberArray[i];
-                break;
-            }
-        }document.write(`Số lớn nhất trong mảng là: ${max}`+"<br>");
+        const numberArray = new Array (1,788,3,4,55,25,73,24,07,86,3,6);
+        let max = Math.max(...numberArray);
+        let index = numberArray.indexOf(max);
+        document.write(max + "<br>");
+        document.write(index);
+        // let max=numberArray[0];
+        // for (i=0;i<numberArray.length;i++){
+        //     if (numberArray[i]-numberArray[i+1]>=0){
+        //         max=numberArray[i];
+        //         break;
+        //     }
+        // }
+        // for (i=0;i<numberArray.length;i++){
+        //     if (max- numberArray[i]<=0){
+        //         max=numberArray[i];
+        //         break;
+        //     }
+        // }
+        // document.write(`Số lớn nhất trong mảng là: ${max}`);
     </script>
 </body>
 </html>
