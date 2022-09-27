@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi feet sang meters</title>
+</head>
+<body>
+    <script>
+        let feet = Number(prompt("Nhập số feet:"));
+        let meters = Number(prompt("Nhập số meters:"));
+        function feetToMeters(feet){
+            let meters=0.305*feet;
+            return meters;
+        }
+        function metersToFeet(meters){
+            let feet=3.279*meters;
+            return feet;
+        }
+        document.write(`${feet} feet = ${feetToMeters(feet)} meters <br>`);
+        document.write(`${meters} meters = ${metersToFeet(meters)} feet`);
+    </script>
+</body>
+</html>
