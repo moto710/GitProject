@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stars1 = new Array ("Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus");
+        let stars2 = new Array ("Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo");
+        let star = prompt("Nhập tên ngôi sao");
+        function findStars(star){
+            if (stars1.includes(star)){
+                let position = stars1.indexOf(star);
+                document.write(`Vị trí chòm sao của ${star} là ${position+1}`);
+            } else {
+                alert("Ngôi sao của bạn không có trong mảng");
+            }
+        }
+        findStars(star);
+    </script>
+</body>
+</html>
