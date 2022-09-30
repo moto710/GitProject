@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check min</title>
+</head>
+
+<body>
+    <script>
+        let a = Number(prompt("Nhập số thứ nhất")),
+            b = Number(prompt("Nhập số thứ hai:")),
+            c = Number(prompt("Nhập số thứ ba:"));
+        function checkMin(a, b, c) {
+            if (a < b) {
+                if (a < c) {
+                    document.write(`${a} là số bé nhất`);
+                } else {
+                    document.write(`${c} là số bé nhất`);
+                }
+            } else if (b>c){
+                    document.write(`${c} là số bé nhất`);
+                } else {
+                document.write(`${b} là số bé nhất`);
+                }
+        }
+        document.write(`a = ${a}, b = ${b}, c = ${c}`);
+        document.write("<br>"+"<br>");
+        checkMin(a, b, c);
+    </script>
+</body>
+
+</html>
