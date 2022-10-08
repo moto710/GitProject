@@ -11,28 +11,25 @@
 <body>
     <div id="game"></div>
     <script>
-        function Hero(image, top, left, size) {
-            this.image = image;
-            this.top = top;
-            this.left = left;
-            this.size = size;
-
-            this.getHeroElement = function () {
-                return '<img width="' + this.size + '"' +
-                    ' height="' + this.size + '"' +
-                    ' src="' + this.image + '"' +
-                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        class Hero {
+            constructor(image, top, left, size) {
+                this.image = image;
+                this.top = top;
+                this.left = left;
+                this.size = size;
+                function getHeroElement() {
+                    return '<img width="' + this.size + '"' +
+                        ' height="' + this.size + '"' +
+                        ' src="' + this.image + '"' +
+                        ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+                };
+                function moveRight() {
+                    this.left += 100;
+                    console.log('ok: ' + this.left);
+                };
             }
-
-            this.moveRight = function () {
-                this.left += 100;
-                console.log('ok: ' + this.left);
-            }
-
         }
-
-        var hero = new Hero('https://upload.wikimedia.org/wikipedia/en/a/a9/MarioNSMBUDeluxe.png', 15, 25, 150);
-
+        let hero = new Hero('https://upload.wikimedia.org/wikipedia/en/a/a9/MarioNSMBUDeluxe.png', 15, 25, 150);
         function start() {
             if (hero.left < window.innerWidth - hero.size) {
                 hero.moveRight();
@@ -40,7 +37,6 @@
             document.getElementById('game').innerHTML = hero.getHeroElement();
             setTimeout(start, 500)
         }
-
         start();
     </script>
 </body>
