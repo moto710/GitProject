@@ -16,18 +16,18 @@
             arr[i] = prompt("Nhập các item của mảng:");
         }
         document.write(arr);
-        document.write("<br>"+"<br>");
+        document.write("<br>" + "<br>");
         let random = prompt("Nhập ký tự bất kỳ:");
         function checkExist(random) {
             let count = 0;
             for (let i in arr) {
                 if (random == arr[i]) {
-                    count+=1;
-                }else if(count ==0 && i == arr.length-1){
-                    count=-1;
+                    count += 1;
+                } else if (count == 0 && i == arr.length - 1) {
+                    count = -1;
                 }
-            } 
-            return count; 
+            }
+            return count;
         }
         document.write(`Số lần xuất hiện của ${random} trong mảng là ${checkExist(random)}`);
     </script>
